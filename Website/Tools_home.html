@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="shortcut icon" href="https://images.unsplash.com/photo-1605633172394-158c02addcc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1837&q=80" type="image/x-icon">
+<style>
+body
+{
+margin:0px;
+}
+
+.fa {
+    padding: 10px;
+    margin-right:1%;
+    margin-left: 1px;
+    color: black;
+    text-decoration:none;
+    box-sizing: border-box;
+  }
+
+.bg a:hover{
+  background-color:rgba(0,0,0,0.8);
+  color: red;
+  border-radius:5px;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.8);
+}
+
+.logoim{
+  float:left;
+  height:auto;
+  width:200px;
+  margin-left:5%;
+}
+
+.cate{
+  margin-left:43%;
+  margin-top:26px;
+  vertical-align:middle;
+}
+
+.bg{
+  font-family: 'Playfair Display', serif;;
+  font-size:18px;
+  position:fixed;
+  z-index:100;
+  border-bottom:1px solid black;
+  width:100%;
+  background-color:white;
+  top:0;
+}
+.bg a {
+  color:black;
+  padding: 19px 22px;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+.selected{
+  background-color:red;
+  color:black;
+}
+
+.zoom
+{
+transition:transform 0.2s;
+}
+.zoom:hover
+{
+transform:scale(1.08);
+}
+h1
+{
+color: yellow;
+}
+/*table,tr,td
+{
+border:2px dotted darkred;
+border-collapse: collapse;
+}*/
+.table td
+{
+color:green;
+padding: 8px;
+}
+
+.table1 img {
+    vertical-align: middle;
+}
+.div1
+{
+background-color:darkred;
+}
+img.a
+{
+position: right top;
+}
+input[type=number]
+{
+width:30px;
+}
+.button
+{
+ color:black;
+ padding: 15px;
+background-color:yellow;
+height:30px;
+width:300px;
+margin: 10px auto;
+font-size: 30px;
+font-style: bold;
+text-align: center;
+}
+.table td
+{
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.table td:hover
+{
+color:red;
+}
+
+.lazyloaded
+{
+  width:100%;
+  position:absolute;
+  bottom:100;
+  height:600px;
+  z-index: -1;
+} 
+
+
+.growthWithLove{
+position:relative;
+border:1px solid grey;
+top:400px;
+width:80%;
+height:410px;
+ margin-left: 10%;
+ margin-bottom: 140px;
+
+}
+
+.growthWithLove img
+{
+  width: 100%;
+}
+
+.growthWithLoveDesc
+{ 
+  background-color: #fff; 
+ padding-top: 10px;
+padding-bottom: :20px;
+  width:100%;
+  height:350px;
+  position: relative; 
+  
+  }
+
+  .growthWithLoveDesc h3
+{font-size: 50px !important;; padding-left: 45px; text-align:center;font-weight:normal; background-size: 35px; margin-top: 50px;}
+
+@media screen and (min-width: 200px) and (max-width: 750px) {
+        .growthWithLoveDesc{padding: 20px;}
+  .growthWithLoveDesc h3{font-size: 25px !important;margin-top: 0;font-weight: bold;}
+ }
+@media screen and (min-width: 601px) and (max-width: 900px) {
+   .growthWithLoveDesc h3{background-size: 26px;margin-top: 0;}
+ }
+@media screen and (min-width: 751px) and (max-width: 900px) {
+     .growthWithLoveDesc h3{font-size: 24px !important;margin-top: 0;}
+ }
+@media screen and (min-width: 901px) and (max-width: 1050px) {
+  .growthWithLoveDesc h3{font-size: 40px !important;margin-top: 0;}
+ }
+
+  .trending1{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  height:250px;
+}
+.trending1 td{
+  text-align: center;
+  color: black;
+  padding:10px;
+  font-size:18px;
+}
+
+.leaf
+{
+  height: 225px;
+  width: 100px;
+  float:right;
+}
+
+.leaf1
+{
+  margin-top: -10px;
+  height: 220px;
+  width: 100px;
+  float:left;
+  
+}
+
+.foot
+{
+    font-size: 40px;
+    align-content: right;
+    width: 80%;
+    margin-left: 180px;
+    font-weight: lighter;
+    margin-top: 215px;
+    position:relative;
+    text-align:center;
+    
+}
+.foot1
+{
+   text-align:center;
+    font-family:  Verdana, sans-serif;
+   /* margin-left: 330px;*/
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+}
+
+
+</style>
+
+<body>
+<nav class="bg">
+<img src="https://images.unsplash.com/photo-1605633172394-158c02addcc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1837&q=80" class="logoim">
+    <div class="cate">
+		<b><a href="index.html">Home</a>
+		<a href="Plants_home.html">Plants</a> 
+        <a href="Seeds_home.html">Seeds</a> 
+		<a href="Tools_home.html">Tools</a>
+		<a href="plant_care_home.html">Plant Care</a>
+        <a href="#">Blogs</a>
+        <a href="#">Help/FAQ</a></b>
+    </div>
+  
+    </nav>
+
+
+<section>
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Pruning & Cutting Tools</h1>
+
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Every plant/tree needs to be pruned for a well-maintained look. Pruning is an art and can be done effectively only with an efficient set of tools.</div>
+<form>
+<table border="0" width="100%" class="table">
+  <tr >
+    <td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Falcon Hedge Shear - 666.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/f/a/falconhedgeshear666_1.png" height="350px" width="300px" ></a> </td>
+    <td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Falcon Secateur Economy M-2.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/f/a/falconsecateureconomym2_1.png" height="350px" width="300px"></a> </td>
+    <td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Felco 600 Folding Saw.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/f/e/felco600foldingsaw_1.png" height="350px" width="300px"></a> </td>
+    <td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Green Seasons Deluxe Alum By Pass Rose Pruner.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/g/r/greenseasonsdeluxealumbypassrosepruner_1.png" height="350px" width="300px"></a> </td>
+  </tr>
+  <tr>
+<td align="center"><b>Falcon Hedge Shear - 666</b></td>
+<td align="center"><b>Falcon Secateur Economy M-2</b></td>
+<td align="center"><b>Felco 600 Folding Saw</b></td>
+<td align="center"><b>Green Seasons Deluxe Alum By Pass Rose Pruner</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹525</b></td>
+<td align="center"><b>₹500</b></td>
+<td align="center"><b>₹2250</b></td>
+<td align="center"><b>₹415</b></td>
+</tr>
+</table>
+
+<!--h1 style="color:darkred; ">Pasta</h1-->
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Axe- Medium.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidaxemedium_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Classic Anvil Secateur.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidclassicanvilsecateur_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Curve Pruning Saw- 33 Cm.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidcurvepruningsaw33cm_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Double-Edge Sickle.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramiddoubleedgesickle_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Pyramid Axe- Medium</b></td>
+<td align="center"><b>Pyramid Classic Anvil Secateur</b></td>
+<td align="center"><b>Pyramid Curve Pruning Saw- 33 Cm</b></td>
+<td align="center"><b>Pyramid Double-Edge Sickle</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹625</b></td>
+<td align="center"><b>₹425</b></td>
+<td align="center"><b>₹785</b></td>
+<td align="center"><b>₹275</b></td>
+</tr>
+
+</table>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Hand Tools</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Hand Tools are essential if you have a small garden or pot plants at home. Compact in size these tools offer various functionalities such as cultivating the soil, removing weeds, mixing soil with a trowel, etc.</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Falcon Single Prong Weeder with Plastic Handle.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/f/a/falconsingleprongweederwithplastichandle_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Falcon Steel Cultivator with Plastic Handle.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/f/a/falconsteelcultivatorwithplastichandle_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Bent Scraper.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidbentscraper_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Cultivator with Cushion Grip Wooden Handle.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidcultivatorwithcushiongripwoodenhandle_1.png" height="350px" width="300px"></a></td>
+</tr>
+<tr>
+<td align="center"><b>Falcon Single Prong Weeder with Plastic Handle</b></td>
+<td align="center"><b>Falcon Steel Cultivator with Plastic Handle</b></td>
+<td align="center"><b>Pyramid Bent Scraper</b></td>
+<td align="center"><b>Pyramid Cultivator with Cushion Grip Wooden Handle</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹180</b></td>
+<td align="center"><b>₹210</b></td>
+<td align="center"><b>₹265</b></td>
+<td align="center"><b>₹250</b></td>
+</tr>
+</table>
+
+<!--h1 style="color:darkred; ">Appetizers</h1-->
+
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Double Side Rake & Trowel.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramiddoublesiderake_trowel_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Ergonomic Grip SS Cultivator.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidergonomicgripsscultivator_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Fork with Wooden Handle.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidforkwithwoodenhandle_2.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Mini Garden Bonsai Set.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidminigardenbonsaiset_1.png" height="350px" width="300px"></a> </td>
+
+
+</tr>
+<tr>
+<td align="center"><b>Pyramid Double Side Rake & Trowel</b></td>
+<td align="center"><b>Pyramid Ergonomic Grip SS Cultivator</b></td>
+<td align="center"><b>Pyramid Fork with Wooden Handle</b></td>
+<td align="center"><b>Pyramid Mini Garden Bonsai Set</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹240</b></td>
+<td align="center"><b>₹345</b></td>
+<td align="center"><b>₹215</b></td>
+<td align="center"><b>₹265</b></td>
+</tr>
+</table>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Digging & Raking Tools</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Digging and Raking helps in keeping the garden soil aerated, free from the nuisance of weeds and is considered optimum for the growth of flowers, fruits, and vegetables. Since time immemorial these two tasks are considered as the most essential and the most important tasks in gardening.</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Pickaxe- Large.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidpickaxelarge_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\TATA Spade.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/t/a/tataspade_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Falcon Adjustable Wire Leaf Rake.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/f/a/falconadjustablewireleafrake_1.png" height="350px" width="300px"></a></td>
+  <td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Teeth Rake.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidteethrake_1_1.png" height="350px" width="300px"></a></td>
+</tr>
+<tr>
+<td align="center"><b>Pyramid Pickaxe- Large</b></td>
+<td align="center"><b>TATA Spade</b></td>
+<td align="center"><b>Falcon Adjustable Wire Leaf Rake</b></td>
+<td align="center"><b>Pyramid Teeth Rake</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹540</b></td>
+<td align="center"><b>₹525</b></td>
+<td align="center"><b>₹1045</b></td>
+<td align="center"><b>₹225</b></td>
+</tr>
+</table>
+<table width="100%" class="table">
+<tr>
+  <td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Rake - 10 Teeth.html"><img src="http://swarnagardens.com/image/cache/catalog/04.Garden%20tools/Images/Garden%20Tools/Digging%20and%20raking%20tools/10%20Teeth%20Rake-500x500.jpg" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Pickaxe- Medium.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidpickaxemedium_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Pickaxe- Small.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidpickaxesmall_1.png" width="250px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\TATA Digging Pickaxe.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/t/a/tatadiggingpickaxe_1.png" height="350px" width="300px"></a></td>
+</tr>
+<tr>
+  <td align="center"><b>Rake - 10 Teeth</b></td>
+<td align="center"><b>Pyramid Pickaxe- Medium</b></td>
+<td align="center"><b>Pyramid Pickaxe- Small</b></td>
+<td align="center"><b>TATA Digging Pickaxe</b></td>
+</tr>
+<tr>
+  <td align="center"><b>₹375</b></td>
+<td align="center"><b>₹370</b></td>
+<td align="center"><b>₹285</b></td>
+<td align="center"><b>₹650</b></td>
+
+</tr>
+
+</table>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Watering Tools</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">A perfect gardener is the one who utilizes all his resources efficiently. Today, with the scarcity of water it is highly important that our gardens are watered efficiently.</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Concorde Four Arm Sprinkler.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/c/o/concordefourarmsprinkler_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Green PVC Pipe.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/g/r/greenpvcpipe130meter_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid 5 Dial Sprinkler With Quick.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramid5dialsprinklerwithquick_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Ace-Twist Hose Nozzle.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidacetwisthosenozzle_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Concorde Four Arm Sprinkler</b></td>
+<td align="center"><b>Green PVC Pipe - 30 meter</b></td>
+<td align="center"><b>Pyramid 5 Dial Sprinkler With Quick</b></td>
+<td align="center"><b>Pyramid Ace-Twist Hose Nozzle</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹255</b></td>
+<td align="center"><b>₹2480</b></td>
+<td align="center"><b>₹220</b></td>
+<td align="center"><b>₹545</b></td>
+</tr>
+
+</table>
+
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid Plastic Sprinkler.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidplasticsprinkler_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Pyramid X826 Five Way Dial Plastic Hose Nozzle.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/p/y/pyramidx826fivewaydialplastichosenozzle_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Sprinkler Stand.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/s/p/sprinklerstand_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Concorde Flora Watering Can - 12 Litres.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/d/s/dsc03492.jpg" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Pyramid Plastic Sprinkler</b></td>
+<td align="center"><b>Pyramid X826 Five Way Dial Plastic Hose Nozzle</b></td>
+<td align="center"><b>Sprinkler Stand</b></td>
+<td align="center"><b>Concorde Flora Watering Can - 12 Litres</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹265</b></td>
+<td align="center"><b>₹199</b></td>
+<td align="center"><b>₹550</b></td>
+<td align="center"><b>₹899</b></td>
+</tr>
+
+</table><br><br>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Garden Decor</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">A beautiful garden is made up of healthy plants and tasteful decor.</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Oasis Premium Floral Foam.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/o/a/oasispremiumfloralfoam_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Onyx Yellow Polished Pebbles- 1 Kg.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/o/n/onyxyellowpolishedpebbles1kg_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Beige Tumbled Pebbles- 1 Kg.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/b/e/beigetumbledpebbles1kg_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Carnallion Polished Pebbles- 1 Kg.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/c/a/carnallionpolishedpebbles1kg_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Oasis Premium Floral Foam</b></td>
+<td align="center"><b>Onyx Yellow Polished Pebbles- 1 Kg</b></td>
+<td align="center"><b>Beige Tumbled Pebbles- 1 Kg</b></td>
+<td align="center"><b>Carnallion Polished Pebbles- 1 Kg</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹160</b></td>
+<td align="center"><b>₹465</b></td>
+<td align="center"><b>₹185</b></td>
+<td align="center"><b>₹620</b></td>
+</tr>
+
+</table>
+
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Lawn Edge (9 meter X 15 cm).html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/l/a/lawnedge9meterx15cm_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Nitrile NU 1513 Hand Gloves - Large Size.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/n/i/nitrilenu1513handgloveslargesize_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Lemon Yellow Tumbled Pebbles- 1 Kg.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/l/e/lemonyellowtumbledpebbles1kg_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Tools & Accessories\Onyx Sea Blue Polished Pebbles- 1 Kg.html"><img src="https://media.ugaoo.com/catalog/product/cache/67150557dcf8de3036f902b0a5817f90/o/n/onyxseabluepolishedpebbles1kg_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Lawn Edge (9 meter X 15 cm)</b></td>
+<td align="center"><b>Nitrile NU 1513 Hand Gloves - Large Size</b></td>
+<td align="center"><b>Lemon Yellow Tumbled Pebbles- 1 Kg</b></td>
+<td align="center"><b>Onyx Sea Blue Polished Pebbles- 1 Kg</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹580</b></td>
+<td align="center"><b>₹195</b></td>
+<td align="center"><b>₹195</b></td>
+<td align="center"><b>₹485</b></td>
+</tr>
+
+</table>
+
+</form><br><br>
+
+</section>
+
+<section style="font-family: 'Verdana',sans-serif;">
+          <img class="lazyloaded" src="https://media.ugaoo.com/wysiwyg/grownwithlovesection.jpg">
+                <div class="growthWithLove">
+                    
+                    <div class="growthWithLoveDesc">
+                        <h3>Grown With Love, Delivered With Hope!</h3>
+                         <table class="trending1" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/packaging1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/guidance1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/curated1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/refund-and-replacement1.png" style="height:50px;width:50px;"></td>  
+                          </tr>
+                          <tr>
+                            <td><h4>Packaging/shipping</h4><p>Sturdy and smart for the plant's safe journey</p></td>
+                            <td><h4>Expert guidance</h4><p>Hand holding you through the plant world</p></td>
+                            <td><h4>Curated Look</h4><p>Curated plants to make every corner insta worthy</p></td>
+                            <td><h4>Replacement and Refund</h4><p>Not happy? We have your back.</p></td>
+                          </tr>
+                         </tbody></table> 
+                        
+                    </div>
+
+                </div>
+                
+</section>
+<br><br><br><br><br><br><br>
+<section style="font-family: 'Verdana',sans-serif;">
+<div>
+  <img class="leaf1" src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/elements/leahomefFoot1.jpg">
+  <img class="leaf" src="https://images.unsplash.com/photo-1605721372022-82d065dfcd52?ixlib=rb-1.2.1&auto=format&fit=crop&w=542&q=80">
+  <h2 class="foot">&nbsp;At PlantMe, we firmly believe that we do not inherit the earth  from our ancestors, but borrow it from our children.</h2>
+  <p class="foot1">Let's pass it on cleaner, better, and greener.</p>
+  <br><br><br>
+</div>
+</section>
+             <hr>
+<footer style="font-family: 'Verdana',sans-serif;">
+  <div>
+   <a href="#" class="fa fa-facebook fa-2x"></a>
+    <a href="#" class="fa fa-instagram fa-2x"></a>
+    <a href="#" class="fa fa-youtube-play fa-2x"></a>
+    <a href="#" class="fa fa-twitter fa-2x"></a>
+    <a href="#" class="fa fa-linkedin fa-2x"></a>
+
+    <a href="#" style="color: black;text-decoration: none;margin-left: 180px;font-size: 18px;"><span style="font-weight: bold;">Customer Care</span>: +91 xxx-xxxx-xxx</a>
+    <a href="#" style="color: black;text-decoration: none;margin-left: 260px;font-size: 18px;"><span style="font-weight: bold;">Email Us</span>:support@plantme.com</a>
+  </div>
+  <br>
+  <hr>
+  <br>
+<table class="table1">
+  <tbody><tr>
+    <td style="padding-left:80px;padding-top: 15px; color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/india.svg">&nbsp;&nbsp;Made In India</td>
+    <td style="padding-left:130px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/grown.svg">&nbsp;&nbsp;Grown With Love</td>
+    <td style="padding-left:130px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/genuine.svg">&nbsp;&nbsp;Genuine Products</td>
+    <td style="padding-left:130px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/delivered.svg">&nbsp;&nbsp;Delivered With Care</td>
+    <td style="padding-left:110px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/secure.svg">&nbsp;&nbsp;Secure Payment</td>
+  </tr>
+</tbody></table>
+<br><br><br>
+<img style="width: 100%;height: 300px;" src="https://static.scientificamerican.com/sciam/cache/file/D1E779C2-5585-48B9-B5B8CA83481D212C_source.jpg?w=590&h=800&7D7C3BD8-AAD4-4306-AC19D3D75FA6F8ED">
+<p style="text-align: center;font-size: 12px;font-family: 'Verdana',sans-serif;
+">All rights reserved © 2020 | PlantMe.com</p>
+</footer>
+
+
+</body>
+
+</body>

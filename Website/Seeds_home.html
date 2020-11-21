@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="shortcut icon" href="https://images.unsplash.com/photo-1605633172394-158c02addcc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1837&q=80" type="image/x-icon">
+<style>
+body
+{
+margin:0px;
+}
+
+.fa {
+    padding: 10px;
+    margin-right:1%;
+    margin-left: 1px;
+    color: black;
+    text-decoration:none;
+    box-sizing: border-box;
+  }
+
+.bg a:hover{
+  background-color:rgba(0,0,0,0.8);
+  color: red;
+  border-radius:5px;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.8);
+}
+
+.logoim{
+  float:left;
+  height:auto;
+  width:200px;
+  margin-left:5%;
+}
+
+.cate{
+  float:left;
+  margin-left:25%;
+  margin-top:26px;;
+}
+
+.bg{
+  font-family: 'Playfair Display', serif;;
+  font-size:18px;
+  position:fixed;
+  z-index:100;
+  border-bottom:1px solid black;
+  width:100%;
+  background-color:white;
+  top:0;
+}
+
+.bg a {
+ color:black;
+  padding: 19px 22px;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+.selected{
+  background-color:red;
+  color:black;
+}
+
+.zoom
+{
+transition:transform 0.2s;
+}
+.zoom:hover
+{
+transform:scale(1.08);
+}
+h1
+{
+color: yellow;
+}
+/*table,tr,td
+{
+border:2px dotted darkred;
+border-collapse: collapse;
+}*/
+.table td
+{
+color:green;
+padding: 8px;
+}
+
+.table1 img {
+    vertical-align: middle;
+}
+.div1
+{
+background-color:darkred;
+}
+img.a
+{
+position: right top;
+}
+input[type=number]
+{
+width:30px;
+}
+.button
+{
+ color:black;
+ padding: 15px;
+background-color:yellow;
+height:30px;
+width:300px;
+margin: 10px auto;
+font-size: 30px;
+font-style: bold;
+text-align: center;
+}
+.table td
+{
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.table td:hover
+{
+color:red;
+}
+
+.lazyloaded
+{
+  width:100%;
+  position:absolute;
+  bottom:100;
+  height:600px;
+  z-index: -1;
+} 
+
+
+.growthWithLove{
+position:relative;
+border:1px solid grey;
+top:400px;
+width:80%;
+height:410px;
+ margin-left: 10%;
+ margin-bottom: 140px;
+
+}
+
+.growthWithLove img
+{
+  width: 100%;
+}
+
+.growthWithLoveDesc
+{ 
+  background-color: #fff; 
+ padding-top: 10px;
+padding-bottom: :20px;
+  width:100%;
+  height:350px;
+  position: relative; 
+  
+  }
+
+  .growthWithLoveDesc h3
+{font-size: 50px !important;; padding-left: 45px; text-align:center;font-weight:normal; background-size: 35px; margin-top: 50px;}
+
+@media screen and (min-width: 200px) and (max-width: 750px) {
+        .growthWithLoveDesc{padding: 20px;}
+  .growthWithLoveDesc h3{font-size: 25px !important;margin-top: 0;font-weight: bold;}
+ }
+@media screen and (min-width: 601px) and (max-width: 900px) {
+   .growthWithLoveDesc h3{background-size: 26px;margin-top: 0;}
+ }
+@media screen and (min-width: 751px) and (max-width: 900px) {
+     .growthWithLoveDesc h3{font-size: 24px !important;margin-top: 0;}
+ }
+@media screen and (min-width: 901px) and (max-width: 1050px) {
+  .growthWithLoveDesc h3{font-size: 40px !important;margin-top: 0;}
+ }
+
+  .trending1{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  height:250px;
+}
+.trending1 td{
+  text-align: center;
+  color: black;
+  padding:10px;
+  font-size:18px;
+}
+
+.leaf
+{
+  height: 225px;
+  width: 100px;
+  float:right;
+}
+
+.leaf1
+{
+  margin-top: -10px;
+  height: 220px;
+  width: 100px;
+  float:left;
+  
+}
+
+.foot
+{
+    font-size: 40px;
+    align-content: right;
+    width: 80%;
+    margin-left: 180px;
+    font-weight: lighter;
+    margin-top: 215px;
+    position:relative;
+    text-align:center;
+    
+}
+.foot1
+{
+   text-align:center;
+    font-family:  Verdana, sans-serif;
+   /* margin-left: 330px;*/
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+}
+
+
+</style>
+
+<body>
+<nav class="bg">
+<img src="https://images.unsplash.com/photo-1605633172394-158c02addcc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1837&q=80" class="logoim">
+    <div class="cate">
+		<b><a href="index.html">Home</a>
+		<a href="Plants_home.html">Plants</a> 
+        <a href="Seeds_home.html">Seeds</a> 
+		<a href="Tools_home.html">Tools</a>
+		<a href="plant_care_home.html">Plant Care</a>
+        <a href="#">Blogs</a>
+        <a href="#">Help/FAQ</a></b>
+    </div>
+  
+    </nav>
+	
+<h1 style="color:red;margin-top: 100px;font-size: 50px;margin-left: 60px;">Seeds</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">There are numerous benefits of growing plants from seeds. If you start your garden by planting seeds, then you have an extensive range of vegetables, herbs, and flowers to choose from, than if you go down to the nursery to pick up a few nursery-raised plants.</div>
+
+<h1 style="color:black;margin-top: 60px;font-size: 45px;margin-left: 60px;">Vegetable Seeds</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Vegetable Garden is a real adventure for the gardening enthusiasts. It helps one grow and savour his favourite vegetables right into the garden.You can buy high-quality vegetable seeds online in India and can grow your veggies in your kitchen garden.</div>
+<form>
+<table border="0" width="100%" class="table">
+  <tr >
+    <td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Beetroot Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/b/e/beetroot_pkt_1.png" height="350px" width="300px" ></a></td>
+    <td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Bittergourd Seeds (Green Long).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/b/i/bittergourdgreenlong_pkt_1.png" height="350px" width="300px"></a> </td>
+    <td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Black Brinjal Seeds (Long).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/b/l/blackbrinjallong_pkt_1.png" height="350px" width="300px"></a> </td>
+   <td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Bottlegourd Seeds (Long).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/b/o/bottlegourdlong_pkt_2.png" height="350px" width="300px"></a></td>
+  </tr>
+  <tr>
+<td align="center"><b>Beetroot Seeds</b></td>
+<td align="center"><b>Bittergourd Seeds (Green Long)</b></td>
+<td align="center"><b>Black Brinjal Seeds (Long)</b></td>
+<td align="center"><b>Bottlegourd Seeds (Long)</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹50</b></td>
+<td align="center"><b>₹50</b></td>
+<td align="center"><b>₹50</b></td>
+<td align="center"><b>₹50</b></td>
+</tr>
+</table>
+
+<!--h1 style="color:darkred; ">Pasta</h1-->
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Broad Bean Seeds (Surti Papdi).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/b/r/broadbeansurtipapdi_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Cabbage Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/a/cabbage_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Capsicum Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/a/capsicum_pkt_2.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Carrot Nantes Seeds (Improved).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/a/carrotnantesimproved_pkt_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Broad Bean Seeds (Surti Papdi)</b></td>
+<td align="center"><b>Cabbage Seeds</b></td>
+<td align="center"><b>Capsicum Seeds</b></td>
+<td align="center"><b>Carrot Nantes Seeds (Improved)</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹50</b></td>
+<td align="center"><b>₹50</b></td>
+<td align="center"><b>₹50</b></td>
+<td align="center"><b>₹50</b></td>
+</tr>
+
+</table>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Herb Seeds</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Wish to get home the mystical power of herbs and its aroma? Pondering where to start from? Ugaoo gives you the opportunity to grow these tiny magicians at home and start your own little herb garden. All you need to do is, buy herb seeds online from our store, plant them and savour the green plants.</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Arugula Seeds (Rocket Cultivated).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/r/arugularocketcultivated_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Chervil Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/h/chervil_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Italian Basil Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/i/t/italianbasil_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Oregano Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/o/r/oregano_pkt_1.png" height="350px" width="300px"></a></td>
+</tr>
+<tr>
+<td align="center"><b>Arugula Seeds (Rocket Cultivated)</b></td>
+<td align="center"><b>Chervil Seeds</b></td>
+<td align="center"><b>Italian Basil Seeds</b></td>
+<td align="center"><b>Oregano Seeds</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+</tr>
+</table>
+
+
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Sage Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/s/a/sage_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Tulsi Seeds (Holy Basil).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/t/u/tulsiholybasil_pkt_2.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Lavender Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/l/a/lavender_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Mint Seeds (Pudina).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/m/i/mintpudina_pkt_1.png" height="350px" width="300px"></a></td>
+
+
+</tr>
+<tr>
+<td align="center"><b>Sage Seeds</b></td>
+<td align="center"><b>Tulsi Seeds (Holy Basil)</b></td>
+<td align="center"><b>Lavender Seeds</b></td>
+<td align="center"><b>Mint Seeds (Pudina)</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+</tr>
+</table>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Flower Seeds</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Flowers delight people and make them happier; they are the sunshine, food, and medicine for the soul. To glam up your garden space, Ugaoo presents most assorted Flower Seeds online.
+
+</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Aboli Pink Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/b/abolipink_pkt_2.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Ageratum (200 Seeds).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/g/ageratum_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Alyssum (200 Seeds).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/l/alyssum200_pkt_1.png" height="350px" width="300px"></a></td>
+  <td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Aster Mix Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/s/astermix_pkt_1.png" height="350px" width="300px"></a></td>
+</tr>
+<tr>
+<td align="center"><b>Aboli Pink Seeds</b></td>
+<td align="center"><b>Ageratum (200 Seeds)</b></td>
+<td align="center"><b>Alyssum (200 Seeds)</b></td>
+<td align="center"><b>Aster Mix Seeds
+</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹70</b></td>
+<td align="center"><b>₹70</b></td>
+<td align="center"><b>₹70</b></td>
+<td align="center"><b>₹70</b></td>
+</tr>
+</table>
+<table width="100%" class="table">
+<tr>
+  <td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Balsam Mix Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/b/a/balsammix_pkt_2.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Calendula Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/a/calendula_pkt_2.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Candytuft Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/a/candytuft_pkt_2.png" width="250px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Corn Flower Mix Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/o/cornflowermix_pkt_1.png" height="350px" width="300px"></a></td>
+</tr>
+<tr>
+<td align="center"><b>Balsam Mix Seeds</b></td>
+<td align="center"><b>Calendula Seeds</b></td>
+<td align="center"><b>Candytuft Seeds</b></td>
+<td align="center"><b>Corn Flower Mix Seeds</b></td>
+</tr>
+<tr>
+<td align="center"><b>₹70</b></td>
+<td align="center"><b>₹70</b></td>
+<td align="center"><b>₹70</b></td>
+<td align="center"><b>₹70</b></td>
+
+</tr>
+
+</table>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Flower Bulbs</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Many of our favorite flowering plants grow from bulbs—or tubers, rhizomes, or corms—rather than from seeds. Perennial plants that fall into these categories include tulips and daffodils (bulbs), peonies and dahlias (tubers), irises (rhizomes), and gladioli (corms).</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Ixia Panorama Bulbs.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/i/x/ixiapanoramabulbs_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Ixia Yellow Emperor Bulbs.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/i/x/ixiayellowemperorbulbs_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Allium Azureum Bulbs.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/l/alliumazureumbulbs_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Allium Cowanii Bulbs.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/l/alliumcowaniibulbs_pkt_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Ixia Panorama Bulbs</b></td>
+<td align="center"><b>Ixia Yellow Emperor Bulbs</b></td>
+<td align="center"><b>Allium Azureum Bulbs</b></td>
+<td align="center"><b>Allium Cowanii Bulbs</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹100</b></td>
+<td align="center"><b>₹100</b></td>
+<td align="center"><b>₹100</b></td>
+<td align="center"><b>₹100</b></td>
+</tr>
+
+</table>
+
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Amaryllis Bulbs (Amar Lily).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/m/amaryllisbulbsamarlily_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\American Beauty Gladiolus Bulbs.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/m/americanbeautygladiolusbulbs_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Anemone Bicolor Bulbs.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/n/anemonebicolorbulbs_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Anemone Mount Everest Bulbs.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/n/anemonemounteverestbulbs_pkt_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Amaryllis Bulbs (Amar Lily)</b></td>
+<td align="center"><b>American Beauty Gladiolus Bulbs</b></td>
+<td align="center"><b>Anemone Bicolor Bulbs</b></td>
+<td align="center"><b>Anemone Mount Everest Bulbs</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹100</b></td>
+<td align="center"><b>₹100</b></td>
+<td align="center"><b>₹100</b></td>
+<td align="center"><b>₹100</b></td>
+</tr>
+
+</table><br><br>
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Fruit Seeds</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Wouldn't it be fascinating if you got a chance to pick up your favourite fruit from your garden whenever you want? For all the fruit enthusiasts, at Ugaoo, we have fruit seeds available for Papaya (Hybrid), Watermelon (Hybrid), Muskmelon (Organic). These seeds are selected with precision and assure juicy and delectable fruits right in your backyard.</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Cantaloupe Seeds (Muskmelon).html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/a/cantaloupemuskmelon_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Hybrid Watermelon Seeds - Akira (Black) - 50 gm.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/h/y/hybridwatermelonakirablack_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Papaya.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/p/a/papaya_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Watermelon Seeds.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/w/a/watermelon_pkt_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Cantaloupe Seeds (Muskmelon)</b></td>
+<td align="center"><b>Hybrid Watermelon Seeds - Akira (Black) - 50 gm</b></td>
+<td align="center"><b>Papaya seeds</b></td>
+<td align="center"><b>Watermelon Seeds</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+<td align="center"><b>₹80</b></td>
+</tr>
+
+</table>
+
+
+
+<h1 style="color:black;margin-top: 100px;font-size: 45px;margin-left: 60px;">Tree & Grass seeds</h1>
+<div style="margin-left: 60px;font-size: 20px; font-family: 'Verdana',sans-serif;">Grass and Trees are a true essence of every garden. They add beauty, aroma and breathe in life in the lovely green space.</div>
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Acacia Catechu Seeds - 100 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/c/acaciacatechu_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Acacia Mangium Seeds - 100 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/c/acaciamangium_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Alfalfa Seeds (Lucerne Grass) - 100 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/l/alfalfalucernegrass_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Alfalfa Seeds (Lucerne Grass) - 250 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/l/alfalfalucernegrass_pkt_2.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Acacia Catechu Seeds - 100 g</b></td>
+<td align="center"><b>Acacia Mangium Seeds - 100 g</b></td>
+<td align="center"><b>Alfalfa Seeds (Lucerne Grass) - 100 g</b></td>
+<td align="center"><b>Alfalfa Seeds (Lucerne Grass) - 250 g</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹90</b></td>
+<td align="center"><b>₹90</b></td>
+<td align="center"><b>₹90</b></td>
+<td align="center"><b>₹90</b></td>
+</tr>
+
+</table>
+
+<table width="100%" class="table">
+<tr>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Doob Grass Seeds (Carpet Lawn) - 100 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/d/o/doobgrasscarpetlawn_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Cassia Nodosa Seeds - 100 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/c/a/cassianodosa_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Delonix Regia Seeds (Flamboyant Tree) - 100 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/d/e/delonixregia_pkt_1.png" height="350px" width="300px"></a></td>
+<td width="25%" align="center" class="zoom"><a href=" ..\Website\Seeds\Dodonaea Viscosa Seeds - 100 g.html"><img src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/d/o/dodonaeaviscosa_pkt_1.png" height="350px" width="300px"></a></td>
+
+</tr>
+<tr>
+<td align="center"><b>Doob Grass Seeds (Carpet Lawn) - 100 g</b></td>
+<td align="center"><b>Cassia Nodosa Seeds - 100 g</b></td>
+<td align="center"><b>Delonix Regia Seeds (Flamboyant Tree) - 100 g</b></td>
+<td align="center"><b>Dodonaea Viscosa Seeds - 100 g</b></td>
+
+</tr>
+<tr>
+<td align="center"><b>₹90</b></td>
+<td align="center"><b>₹90</b></td>
+<td align="center"><b>₹90</b></td>
+<td align="center"><b>₹90</b></td>
+</tr>
+
+</table>
+
+
+</form><br><br>
+
+<section style="font-family: 'Verdana',sans-serif;">
+          <img class="lazyloaded" src="https://media.ugaoo.com/wysiwyg/grownwithlovesection.jpg">
+                <div class="growthWithLove">
+                    
+                    <div class="growthWithLoveDesc">
+                        <h3>Grown With Love, Delivered With Hope!</h3>
+                         <table class="trending1" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/packaging1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/guidance1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/curated1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/refund-and-replacement1.png" style="height:50px;width:50px;"></td>  
+                          </tr>
+                          <tr>
+                            <td><h4>Packaging/shipping</h4><p>Sturdy and smart for the plant's safe journey</p></td>
+                            <td><h4>Expert guidance</h4><p>Hand holding you through the plant world</p></td>
+                            <td><h4>Curated Look</h4><p>Curated plants to make every corner insta worthy</p></td>
+                            <td><h4>Replacement and Refund</h4><p>Not happy? We have your back.</p></td>
+                          </tr>
+                         </tbody></table> 
+                        
+                    </div>
+
+                </div>
+                
+</section>
+<br><br><br><br><br><br><br>
+<section style="font-family: 'Verdana',sans-serif;">
+<div>
+  <img class="leaf1" src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/elements/leahomefFoot1.jpg">
+  <img class="leaf" src="C:\Users\Jatin's ROG\Desktop\Project_octahacks\images\leaf.jpg">
+  <h2 class="foot">&nbsp;At PlantMe, we firmly believe that we do not inherit the earth  from our ancestors, but borrow it from our children.</h2>
+  <p class="foot1">Let's pass it on cleaner, better, and greener.</p>
+  <br><br><br>
+</div>
+</section>
+             <hr>
+<footer style="font-family: 'Verdana',sans-serif;">
+  <div>
+   <a href="#" class="fa fa-facebook fa-2x"></a>
+    <a href="#" class="fa fa-instagram fa-2x"></a>
+    <a href="#" class="fa fa-youtube-play fa-2x"></a>
+    <a href="#" class="fa fa-twitter fa-2x"></a>
+    <a href="#" class="fa fa-linkedin fa-2x"></a>
+
+    <a href="#" style="color: black;text-decoration: none;margin-left: 180px;font-size: 18px;"><span style="font-weight: bold;">Customer Care</span>: +91 xxx-xxxx-xxx</a>
+    <a href="#" style="color: black;text-decoration: none;margin-left: 260px;font-size: 18px;"><span style="font-weight: bold;">Email Us</span>:support@plantme.com</a>
+  </div>
+  <br>
+  <hr>
+  <br>
+<table class="table1">
+  <tbody><tr>
+    <td style="padding-left:80px;padding-top: 15px; color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/india.svg">&nbsp;&nbsp;Made In India</td>
+    <td style="padding-left:130px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/grown.svg">&nbsp;&nbsp;Grown With Love</td>
+    <td style="padding-left:130px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/genuine.svg">&nbsp;&nbsp;Genuine Products</td>
+    <td style="padding-left:130px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/delivered.svg">&nbsp;&nbsp;Delivered With Care</td>
+    <td style="padding-left:110px;padding-top: 15px;color:black;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/secure.svg">&nbsp;&nbsp;Secure Payment</td>
+  </tr>
+</tbody></table>
+<br><br><br>
+<img style="width: 100%;height: 300px;" src="https://static.scientificamerican.com/sciam/cache/file/D1E779C2-5585-48B9-B5B8CA83481D212C_source.jpg?w=590&h=800&7D7C3BD8-AAD4-4306-AC19D3D75FA6F8ED">
+<p style="text-align: center;font-size: 12px;font-family: 'Verdana',sans-serif;
+">All rights reserved © 2020 | PlantMe.com</p>
+</footer>
+
+
+</body>
+
+</body>
