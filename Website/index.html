@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///C:/Users/Shashank/Downloads/project1.html -->
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+ <link rel="shortcut icon" href="https://images.unsplash.com/photo-1605633172394-158c02addcc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1837&q=80" type="image/x-icon">
+	<title>PlantMe!</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+body
+{
+margin:0px;
+}
+
+.fa {
+    padding: 10px;
+    margin-right:1%;
+    margin-left: 1px;
+    color: black;
+    text-decoration:none;
+    box-sizing: border-box;
+  }
+
+.foot
+{
+    font-size: 40px;
+    align-content: right;
+    width: 80%;
+    margin-left: 180px;
+    font-weight: lighter;
+    margin-top: 215px;
+    position:relative;
+    
+    
+}
+.foot1
+{
+   
+    /*font-family: 'Playfair Display',serif;*/
+    margin-left: 330px;
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+}
+
+.leaf
+{
+  height: 225px;
+  width: 100px;
+  float:right;
+}
+
+.leaf1
+{
+  margin-top: -10px;
+  height: 220px;
+  width: 100px;
+  float:left;
+  
+}
+
+.div1{
+ background-color:#111 ;
+
+}
+img.a
+{
+position: right top;
+}
+.marquee{
+  font-size: 20px;
+  font-style: italic;
+  color:yellow;
+}
+.bg a:hover{
+  background-color:rgba(0,0,0,0.8);
+  color: red;
+  border-radius:5px;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.8);
+}
+
+.logoim{
+  float:left;
+  height:auto;
+  width:200px;
+  margin-left:5%;
+}
+
+span.cate{
+  float:left;
+  margin-left:25%;
+  margin-top:26px;;
+}
+
+.bg{
+  font-family: 'Playfair Display', serif;;
+  font-size:18px;
+  position:fixed;
+  z-index:100;
+  border-bottom:1px solid black;
+  width:100%;
+  background-color:white;
+}
+.bg a {
+  color:black;
+  padding: 19px 22px;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+* {box-sizing: border-box;}
+body 
+{
+  font-family: Verdana, sans-serif;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+
+  max-width: 1600px;
+  position: relative;
+  margin:auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  text-align:center;
+  margin-top:5px;
+  margin-left:150px;
+  margin-right:150px;
+  font-style: italic;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: black;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.trending{
+  text-align: center;
+  font-style: bold;
+  color:gold;
+  font-size: 50px;
+}
+.trending1{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  height:250px;
+}
+.trending1 td{
+  text-align: center;
+  color: black;
+  padding:10px;
+
+}
+.zoom {
+  
+  transition: transform .2s;
+  
+  margin: 0 auto;
+}
+.zoom:hover {
+  transform: scale(1.1); 
+}
+.menu{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: gold;
+  width:300px;
+  height: 40px;
+  color:red;
+  font-size: 20px;
+  border: 0px solid tomato;
+
+}
+.category {
+  height:400px;
+  width:100%;
+}
+.category h1{
+  font-size: 40px;
+  text-align: center;
+  color:tomato;
+  background-color: lightgray;
+  padding: 10px;
+}
+.category table{
+  width:100%;
+}
+.category td{
+  text-align: center;
+
+  text-shadow: 5px solid gray;
+}
+.ch2{
+  background-color: white;
+  padding: 10px;
+}
+.delivery h1{
+   margin-left: 60%;
+   margin-top: -250px;
+   color:tomato;
+}
+.delivery img{
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.delivery{
+  background-color: lightgray;
+  height:400px;
+}
+.selected{
+  background-color:red;
+  color:black;
+}
+.footer{
+  background-color: #111;
+  height:400px;
+  width:100%;
+}
+.p1{
+  color:white;
+  margin-right:40%;
+  margin-left: 40px;
+}
+.p2{
+  color:white;
+  margin-left: 90%;
+  margin-top: -90px;
+  color:gold;
+}
+.img1{
+  margin-top: 20px;
+  margin-left: 20px;
+  height:100px;
+}
+.img2{
+  margin-top: 20px;
+  margin-left: 20px;
+  height:100px;
+}
+.img3{
+  margin-left: 70%;
+  margin-top: -500px;
+}
+.news img{
+  height:500px;
+  width:600px;
+}
+div.n1{
+  height:500px;
+  width:700px;
+ /* background-color: yellow;*/
+  margin-left: 100px;
+  
+}
+div.n2{
+  height:400px;
+  width:600px;
+  margin-left: 850px;
+  margin-top: -430px;
+  overflow-y: auto;
+}
+.n2 h1{
+  text-align: center;
+  color:black;
+}
+.n2 p{
+  text-align: center;
+  color:black;
+  font-style: italic;
+  font-size:25px;
+}
+/*----*/
+div.n3{
+  height:500px;
+  /*background-color: yellow;*/
+  margin-left: 850px;
+  margin-top:100px;
+  
+}
+div.n4{
+  height:400px;
+  width:600px;
+  margin-left: 100px;
+  margin-top: -430px;
+  overflow-y: auto;
+}
+.n4 h1{
+  text-align: center;
+  color:black;
+}
+.n4 p{
+  text-align: center;
+  color:black;
+  font-style: italic;
+  font-size:25px;
+}
+/*----*/
+.head
+{
+
+  color:green;
+  font-weight: bold;
+  font-size:30px;
+}
+.plant
+{
+height:400px;
+width:100%;
+}
+.ig{
+  background-image:url(https://c0.wallpaperflare.com/preview/468/930/352/background-website-plant-wall.jpg);
+-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  background-size: cover;
+background-position: center;
+height:400px;
+width:100%;
+}
+.ig,.plant h2,.plant p
+{
+position:absolute;
+}
+.plant h2,.plant p
+{
+position:relative;
+margin-left:25px; 
+}
+.plant h2
+{
+  font-size:40px;
+  padding-top:100px;
+}
+.plant p
+{
+  width:60%;
+  margin-bottom: 20px;
+  font-size:18px;
+  line-height:26px;
+}
+
+/*--------------------*/
+
+@media only screen and (max-width: 767px) {
+.growheader { 
+      font-size: 19px !important;
+  }
+ .growtext {
+      font-size: 16px !important;  
+   }
+}
+
+.growthWithLove{
+position:relative;
+border:1px solid grey;
+top:400px;
+width:80%;
+height:410px;
+ margin-left: 10%;
+ margin-bottom: 140px;
+
+}
+
+.growthWithLove img
+{
+  width: 100%;
+}
+
+.growthWithLoveDesc
+{ 
+  background-color: #fff; 
+ padding-top: 10px;
+padding-bottom: :20px;
+  width:100%;
+  height:350px;
+  position: relative; 
+  
+  }
+.lazyloaded
+{
+  width:100%;
+  position:absolute;
+  bottom:100;
+  height:600px;
+  z-index: -1;
+} 
+.growthWithLoveDesc h3
+{font-size: 50px !important;; padding-left: 45px; text-align:center;font-weight:normal; background-size: 35px; margin-top: 50px;}
+
+@media screen and (min-width: 200px) and (max-width: 750px) {
+        .growthWithLoveDesc{padding: 20px;}
+  .growthWithLoveDesc h3{font-size: 25px !important;margin-top: 0;font-weight: bold;}
+ }
+@media screen and (min-width: 601px) and (max-width: 900px) {
+   .growthWithLoveDesc h3{background-size: 26px;margin-top: 0;}
+ }
+@media screen and (min-width: 751px) and (max-width: 900px) {
+     .growthWithLoveDesc h3{font-size: 24px !important;margin-top: 0;}
+ }
+@media screen and (min-width: 901px) and (max-width: 1050px) {
+  .growthWithLoveDesc h3{font-size: 40px !important;margin-top: 0;}
+ }
+
+/*-------------------*/
+</style>
+
+</head>
+
+<body>
+	<div class="div1">
+    <div style="width:100%; float:right; background-color:white; " class="bg">
+    <img src="https://images.unsplash.com/photo-1605633172394-158c02addcc3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1837&q=80" class="logoim">
+    <span class="cate"><b>
+	<a href="#">Home</a>
+    <a href="Plants_home.html">Plants</a> 
+    <a href="Seeds_home.html">Seeds</a> 
+    <a href="Tools_home.html">Tools</a>
+    <a href="plant_care_home.html">Plant Care</a>
+    <a href="#">Blogs</a>
+    <a href="#">Help/FAQ</a></b>
+    </span>
+  
+    </div>
+</div>
+<!--img src="https://fusionfoods.co.in/assets/img/fflogodragon.png" class="a" width=500px height=150px style="margin-top: -80px;" float="left"-->
+<br><br><br>
+<!--table width="100%" style="margin-left: auto; margin-right: auto;">
+  <tr>
+    <td style="text-align: right; width: 30%;">
+      <img src="https://grants.nih.gov/images/whatsnew-post-it-note.png" height="80px" width="80px">
+    </td>
+    <td>
+
+
+<marquee bgcolor="tomato" width="50%" height="30px">Now Serving a New Taste of India!! Prepared with best hygiene care.</td>
+ 
+
+</table-->
+
+<div class="slideshow-container">
+
+<div class="mySlides fade" style="display: none;">
+  <div class="numbertext"><h1>New Arrivals</h1>
+<p>Happiness comes out of new experiences and our new selection of products is perfect for all you curious souls out there who long for a bit of exploration. We hope they can inspire new beginnings for you.</p>
+</div>
+  <img src="https://media.ugaoo.com/wysiwyg/banners-1-new-arrivals-web.jpg" style="width:100%; height: 600px;">
+  
+</div>
+
+<div class="mySlides fade" style="display: block;">
+  <div class="numbertext"><h1>Herbalicious</h1>
+<p>What basil is to pasta, rosemary is to roasts, and thyme is to butter; a herb garden is to a home. Grow your own with our easy to herb seeds and watch the magic unfold.
+</p></div>
+  <img src="https://media.ugaoo.com/wysiwyg/HomePageBanner-Herbs.jpg" style="width:100%; height: 600px;">
+  
+</div>
+
+<div class="mySlides fade" style="display: none;">
+  <div class="numbertext"><h1>Up your plant glamour</h1>
+<p>Our planters turn your plants into eye-catching statement pieces. These trendsettrs are both elegant and covenient and waiting to be paired with your plant babies.</p></div>
+  <img src="https://media.ugaoo.com/wysiwyg/banners-pots-and-planters.jpg" style="width:100%; height:600px;">
+  
+</div>
+
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot active"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+<br>
+
+
+<h1 class="trending">Top Selling <div style="display: inline-block; color:tomato;">Items</div></h1>
+
+<table class="trending1">
+  <tbody><tr>
+    <td> <a href="..\Website\Plants\Fittonia Green Plant.html"><img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/f/i/fittoniagreen_45_1.png" style="width:90%; height:400px;"> </a></td>
+    <td> <a href="..\Website\Plants\AloeVeraMiniPlant.htm"><img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/l/aloeveramini_45_1.png" style="width:90%; height:400px;"></a> </td>
+     <td> <a href="..\Website\Plants\Calathea Medallion Plant.htm"><img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/4/5/45_17.png" style="width:90%; height:400px;"></a> </td>
+      <td><a href="..\Website\Plants\AglaonemaRedPlant.htm"> <img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/a/g/aglaonemared_45_1.png" style="width:90%; height:400px;"></a> </td>
+  </tr>
+  <tr><b>
+    <td>Fittonia Green Plant</td>
+    <td>AloeVeraMiniPlant</td>
+    <td>Calathea Medallion Plant</td>
+    <td>Aglaonema Red Plant</td></b>
+  </tr>
+  <tr>
+    <td> <a href="..\Website\Plants\Boxwood Buxus Plant.htm"><img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/b/o/boxwoodbuxus_45_1.png" style="width:90%; height:400px;"></a> </td>
+    <td> <a href="..\Website\Plants\Sansevieria Futura Superba Snake Plant.htm"><img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/s/a/sansevieriafuturasuperba_45_1.png" style="width:90%; height:400px;"></a></td>
+    <td> <a href="..\Website\Plants\DracaenaCoffeePlant.htm"><img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/d/r/dracaenacoffee_45_1.png" style="width:90%; height:400px;"></a> </td>
+    <td> <a href="..\Website\Plants\Spathiphyllum Sensation (Peace Lily) Plant.htm"><img class="zoom" src="https://media.ugaoo.com/catalog/product/cache/bf904fa088be7169b4178c352b6a4f7a/s/p/spathiphyllumsensationmed_45_1.png" style="width:90%; height:400px;"></a> </td>
+  </tr>
+  <tr><b>
+    <td>Boxwood Buxus Plant</td>
+    <td>Sansevieria Futura Superba Snake Plant</td>
+    <td>Dracaena Coffee Plant</td>
+    <td>Spathiphyllum Sensation (Peace Lily) Plant</td></b>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+</tbody></table>
+<br><br>
+
+<br><br>
+<!--h1 class="trending">News & <div style="display: inline-block; color:tomato;">Highlights</div></h1--><br>
+<div class="news">
+ 
+  <div class="n1"><img src="https://media.ugaoo.com/wysiwyg/planters-on-fleek.jpg" style="width:700px"></div>
+  <div class="n2"><h1 style="color:red;">Planters on fleek!</h1>
+    <p>
+The perfect companions for your green members and also decor pieces in their own right, our planters truly amp up your space. There is a plant for every home and a planter for every plant. Browse our extensive in-house collection to find your match.</p>
+  </div>
+</div>
+
+<div class="n3"><img src="https://media.ugaoo.com/wysiwyg/giftgrown-homeimage.jpg" style="width:650px;"></div>
+  <div class="n4"><h1 style="color:red;">Gifts that Grow</h1>
+    <p>
+Be it festivals, birthdays or anniversaries, gifting plants signifies hope - for the future. What's better than gifts that grow with you and remind you of happy times. You select, we deliver, and happiness is guaranteed.</p>
+  </div>
+
+
+<div class="category">
+   <h1> <div> Categories</div></h1><br><br>
+   <table>
+     <tbody><tr>
+       <td> <a href="Plants_home.html"><img src="https://www.ugaoo.com/media/catalog/tmp/category/category-banners-plants_5.jpg"></a> </td>
+       <td> <a href="Seeds_home.html"> <img src="https://www.ugaoo.com/media/catalog/tmp/category/seeds_1_3.jpg"> </a> </td>
+       <td> <a href="Tools_home.html"><img src="https://www.ugaoo.com/media/catalog/tmp/category/category-banners-tools_1.jpg"></a></td>
+       <td> <a href="plant_care_home.html"><img src="https://www.ugaoo.com/media/catalog/tmp/category/category-banners_plant_care_4_1.jpg"></a></td>
+      
+     </tr>
+     <tr>
+     <td> <div class="ch2"> Plants </div> </td>
+       <td> <div class="ch2"> Seeds </div> </td>
+       <td> <div class="ch2"> Tools &amp; Accessories </div> </td>
+       <td> <div class="ch2"> Plant care </div> </td>
+     </tr>
+   </tbody></table>
+ </div>
+<section>
+<div class="plant">
+  <img class="ig" src="https://c0.wallpaperflare.com/preview/468/930/352/background-website-plant-wall.jpg">
+  <h2> Become a plant parent today</h2>
+  <p>"Take the leap and we'll stay by your side. Curated with love and care to put a smile on your face every time you a receive a package from us."</p>
+  <p style="font-size:25px;">Happy experiences ahead!</p>
+</div>
+</section>
+<br>
+
+<section>
+          <img class="lazyloaded" src="https://media.ugaoo.com/wysiwyg/grownwithlovesection.jpg">
+                <div class="growthWithLove">
+                    
+                    <div class="growthWithLoveDesc">
+                        <h3>Grown With Love, Delivered With Hope!</h3>
+                         <table class="trending1" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/packaging1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/guidance1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/curated1.png" style="height:50px;width:50px;"></td>
+                          <td><img src="https://www.ugaoo.com/media/wysiwyg/refund-and-replacement1.png" style="height:50px;width:50px;"></td>  
+                          </tr>
+                          <tr>
+                            <td><h4>Packaging/shipping</h4><p>Sturdy and smart for the plant's safe journey</p></td>
+                            <td><h4>Expert guidance</h4><p>Hand holding you through the plant world</p></td>
+                            <td><h4>Curated Look</h4><p>Curated plants to make every corner insta worthy</p></td>
+                            <td><h4>Replacement and Refund</h4><p>Not happy? We have your back.</p></td>
+                          </tr>
+                         </tbody></table> 
+                        
+                    </div>
+
+                </div>
+                
+</section>
+<br><br><br><br><br><br><br>
+<section>
+<div>
+  <img class="leaf1" src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/elements/leahomefFoot1.jpg">
+  <img class="leaf" src="https://images.unsplash.com/photo-1605721372022-82d065dfcd52?ixlib=rb-1.2.1&auto=format&fit=crop&w=542&q=80">
+  <h2 class="foot">&nbsp;At PlantMe, we firmly believe that we do not inherit the earth  from our ancestors, but borrow it from our children.</h2>
+  <p class="foot1">Let's pass it on cleaner, better, and greener.</p>
+  <br><br><br>
+</div>
+</section>
+             <hr>
+<footer>
+  <div>
+   <a href="#" class="fa fa-facebook fa-2x"></a>
+    <a href="#" class="fa fa-instagram fa-2x"></a>
+    <a href="#" class="fa fa-youtube-play fa-2x"></a>
+    <a href="#" class="fa fa-twitter fa-2x"></a>
+    <a href="#" class="fa fa-linkedin fa-2x"></a>
+
+    <a href="#" style="color: black;text-decoration: none;margin-left: 180px;font-size: 15px;"><span style="font-weight: bold;">Customer Care</span>: +91 xxx-xxxx-xxx</a>
+    <a href="#" style="color: black;text-decoration: none;margin-left: 260px;font-size: 15px;"><span style="font-weight: bold;">Email Us</span>:support@plantme.com</a>
+  </div>
+  <br>
+  <hr>
+  <br>
+<table>
+  <tbody><tr>
+    <td style="padding-left:80px;padding-top: 15px;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/india.svg">&nbsp;&nbsp;Made In India</td>
+    <td style="padding-left:130px;padding-top: 15px;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/grown.svg">&nbsp;&nbsp;Grown With Love</td>
+    <td style="padding-left:130px;padding-top: 15px;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/genuine.svg">&nbsp;&nbsp;Genuine Products</td>
+    <td style="padding-left:130px;padding-top: 15px;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/delivered.svg">&nbsp;&nbsp;Delivered With Care</td>
+    <td style="padding-left:110px;padding-top: 15px;"><img src="https://static.ugaoo.com/version1604535838/frontend/Agnie/Ugaoo/en_US/images/icons/secure.svg">&nbsp;&nbsp;Secure Payment</td>
+  </tr>
+</tbody></table>
+<br><br><br>
+<img style="width: 100%;height: 300px;" src="https://static.scientificamerican.com/sciam/cache/file/D1E779C2-5585-48B9-B5B8CA83481D212C_source.jpg?w=590&h=800&7D7C3BD8-AAD4-4306-AC19D3D75FA6F8ED">
+<p style="text-align: center;font-size: 12px;">All rights reserved © 2020 | PlantMe.com</p>
+</footer>
+
+
+</body></html>
